@@ -7,12 +7,12 @@ import Pilas.*;
 import java.util.ArrayList;
 
 /**
- * @author Fernando Retama
+ * Clase que contiene a los métodos estáticos usados para el funcionamiento de la calculadora
 */
 public class Metodos {//métodos estáticos
     
     /**
-     * método que determina si un caracter es parte de un operando
+     * Método que determina si un caracter es parte de un operando
      * @author Fenando Retama
      * @param car (caracter)
      * @return boolean 
@@ -24,10 +24,10 @@ public class Metodos {//métodos estáticos
     }
     
     /**
-     * método que segmenta la cadena en operadores y operandos
+     * Método que segmenta la cadena en operadores y operandos
      * @author Fernando Retama
      * @param cadena de texto
-     * @return ArrayList con la cadena segmentada
+     * @return ArrayList con la cadena segmentada en operadores y operandos
      */
     public static ArrayList<String> segmenta(String cadena){
         ArrayList <String> resultado = new ArrayList<>();
@@ -51,10 +51,14 @@ public class Metodos {//métodos estáticos
         return resultado;
     }
     /**
-     * método que valida si una expreión infija está bien escrita
+     * Método que valida si una expresión infija está bien escrita
      * @author Fernando Retama, Sofía Imelda
      * @param elementos del String de entrada ya segmentado
      * @return boolean
+     * <ul>
+     * <li> true: está bien escrita </li>
+     * <li> false: está mal escrita </li>
+     * </ul>
      */ 
     public static boolean validaString (ArrayList<String> elementos){
         int j, i=0;
@@ -107,10 +111,16 @@ public class Metodos {//métodos estáticos
     }
     
     /**
-     * método que determina la prioridad de los operadores.
+     * Método que determina la prioridad de los operadores.
      * @author Alexa
      * @param operador (en String)
-     * @return entero que represesnta la prioridad de los operadores
+     * @return entero que represesnta la prioridad del operador recibido
+     * <ul>
+     * <li> 1: suma o resta </li>
+     * <li> 2: multiplicación o división </li>
+     * <li> 3: exponente </li>
+     * </ul>
+     * 
      */
     public static int prioridadOp(String operador){
         int resp=-1;
@@ -125,10 +135,10 @@ public class Metodos {//métodos estáticos
     }
     
     /**
-     * método que convierte una cadena de infija a postfija.
+     * Método que convierte una cadena de infija a postfija.
      * @author Alexa
-     * @param infijo váido en ArrayList segmentado
-     * @return ArrayList de la expreión en posfijo
+     * @param infijo correctamente escrito en ArrayList segmentado
+     * @return ArrayList de la expresión en posfijo
      */
     public static ArrayList<String> convertirPostfijo(ArrayList<String> infijo){
         ArrayList<String> resultado = new ArrayList();
@@ -174,9 +184,6 @@ public class Metodos {//métodos estáticos
     
     /**
      * Resuelve la expresión en postfija
-     * @author Diego Román
-     * @param exp
-     * @return el resultado de las operaciones resultantes.
      * <ul>
      * <li> Se recibe un ArrayList ("exp") con los elementos de la operación en
      * postfija, con signos y números por separado</li>
@@ -190,7 +197,10 @@ public class Metodos {//métodos estáticos
         * -Cada vez que se encuentra un operador se busca qué operación se va a ejecutar y posteriormente se obtienen los dos elementos más 
         * próximos al operador (respetando su orden).
         * -Se calcula el resultado y se agrega nuevamente en la pila.
-        * -Si ya se recorrió todo el ArrayList, todas las operaciones correspondientes se realizaron y se devuelve el resultado final (resp).
+        * -Si ya sse recorrió todo el ArrayList, todas las operaciones correspondientes se realizaron y se devuelve el resultado final (resp).
+     * @author Diego Román
+     * @param exp 
+     * @return el resultado en String de las operaciones o un mensaje de error si se intenta dividir entre cero
      */
     public static String resuelvePost(ArrayList<String> exp) {
         String resp = "";
@@ -230,7 +240,7 @@ public class Metodos {//métodos estáticos
     }
     
     /**
-     * Realiza toda la operación de la calculadora
+     * Recopila las demás funciones para la operación de la calculadora
      * @author Fernando Retama
      * @param cadena
      * @return resultado o mensaje de error

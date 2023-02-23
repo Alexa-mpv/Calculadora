@@ -1,7 +1,6 @@
 package Pilas;
 /**
- *
- * @author Retama
+ * Interface con la funcionalidad que debe tener una pila
  */
 public interface PilaADT <T> {
     

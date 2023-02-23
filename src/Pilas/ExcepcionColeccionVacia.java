@@ -1,7 +1,6 @@
 package Pilas;
 /**
- *
- * @author Retama
+ * Excepción que usa la pila cuando está vacía y se intenta hacer
  */
 public class ExcepcionColeccionVacia extends RuntimeException{
 

@@ -1,8 +1,6 @@
 package Pilas;
 /**
- *
- * @author Retama
- * @param <T>
+ * Clase Pila que utiliza un arreglo para contener los elementos
  */
 public class PilaA <T> implements PilaADT<T>{
     
