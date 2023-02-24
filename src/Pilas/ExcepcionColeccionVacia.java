@@ -1,6 +1,6 @@
 package Pilas;
 /**
- * Excepción que usa la pila cuando está vacía y se intenta hacer
+ * Excepción que usa la pila cuando está vacía y se intenta hacer pop
  */
 public class ExcepcionColeccionVacia extends RuntimeException{
 
