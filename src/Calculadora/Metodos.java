@@ -119,6 +119,7 @@ public class Metodos {//métodos estáticos
      * <li> 1: suma o resta </li>
      * <li> 2: multiplicación o división </li>
      * <li> 3: exponente </li>
+     * <li> -1: no es operador </li>
      * </ul>
      * 
      */

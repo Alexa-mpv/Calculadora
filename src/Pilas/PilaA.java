@@ -65,14 +65,4 @@ public class PilaA <T> implements PilaADT<T>{
                 tope --;
             }
     }
-    
-    public static void main(String[] args) {
-        PilaADT pila1 = new PilaA();
-        for(int i=0; i<5; i++)
-            pila1.push(i);
-        
-        System.out.println(pila1.toString());
-        System.out.println(pila1.equals(pila1));
-        System.out.println(pila1.toString());
-    }
 }
